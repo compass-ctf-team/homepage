@@ -15,22 +15,7 @@ export const metadata: Metadata = {
     default: 'COMPASS CTF',
     template: '%s | COMPASS'
   },
-  description:
-    "COMPASS CTF is a team affiliated to COMPASS Lab from Southern University of Science and Technology (SUSTech).",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  },
-  verification: {
-    google: ENV.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-  }
+  description: "COMPASS CTF is a team affiliated to COMPASS Lab from Southern University of Science and Technology (SUSTech).",
 }
 
 interface Props {

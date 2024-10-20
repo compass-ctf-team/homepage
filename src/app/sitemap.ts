@@ -1,6 +1,8 @@
 import { ENV } from '@/lib/constants'
 import { getContents } from '@/lib/contents'
 
+export const dynamic = 'force-static'
+
 export default async function sitemap() {
   const URL = ENV.NEXT_PUBLIC_WEBSITE_URL
 
