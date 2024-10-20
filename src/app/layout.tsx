@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     default: 'COMPASS CTF',
     template: '%s | COMPASS'
   },
+  icons: {
+    icon: '/favicon.png',
+  },
   description: "COMPASS CTF is a team affiliated to COMPASS Lab from Southern University of Science and Technology (SUSTech).",
 }
 
