@@ -9,7 +9,7 @@ const segment = useSelectedLayoutSegment()
     <nav className='select-none overflow-x-auto text-sm md:text-base lg:px-4 lg:py-3'>
       <div className='items-center justify-between gap-2 px-2 lg:px-0 hidden lg:flex'>
         <div className='flex items-center gap-2'>
-          <div className='h-4 w-1.5 bg-[#969696]' />
+          <div className='h-4 w-1.5 bg-[#27f5ac]' />
           <a className='flex items-center' href='https://github.com/compass-ctf-team' target='_blank' rel='norreferrer'>
             <svg
               className='mr-1 h-3 w-3'
@@ -34,7 +34,7 @@ const segment = useSelectedLayoutSegment()
       </div>
       <div className='flex items-center justify-between gap-20 overflow-x-auto px-2 py-3 leading-none lg:px-0 lg:py-0'>
         <ul className='flex items-center'>
-          <li className='mr-1 bg-[#969696] px-2 py-0.5 leading-none text-black not-sr-only'>tmux</li>
+          <li className='mr-1 bg-[#277df5] px-2 py-0.5 leading-none text-black not-sr-only'>tmux</li>
           {menu.map(item => {
             const isActived = segment === item.href.split('/')[1] || (segment === null && item.href === '/')
             return (
@@ -65,7 +65,11 @@ const menu = [
   },
   {
     title: 'members',
-    href: '/members'
+    href: '/members/active'
+  },
+  {
+    title: 'ctf',
+    href: 'https://detroit.sustech.edu.cn'
   },
   {
     title: 'blog',

@@ -57,7 +57,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(({ isFullscreen, .
         </button>
       </div>
       <p className='mx-auto select-none font-semibold not-sr-only hidden lg:block'>Terminal</p>
-      <p className='mx-auto select-none font-semibold not-sr-only lg:hidden block'>Term</p>
+      <p className='mx-auto select-none font-semibold not-sr-only lg:hidden block'>Termux</p>
     </header>
   )
 })

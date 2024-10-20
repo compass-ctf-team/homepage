@@ -2,7 +2,6 @@
 import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 
-import { getFileIcon } from '@/components/icons'
 
 export interface Menu {
   title: string
@@ -19,7 +18,6 @@ export const Nav = ({ menu }: { menu: Menu[] }) => {
           href={item.href}
           className={`flex shrink-0 items-center gap-1.5 px-3 py-0.5 leading-none transition-all ${pathname === item.href ? 'bg-[#969696] text-black' : 'text-[#BDBDBDE6]'}`}
         >
-          {getFileIcon(item.title)}
           {item.title}
         </Link>
       ))}
