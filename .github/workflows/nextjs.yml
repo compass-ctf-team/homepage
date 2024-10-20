@@ -51,7 +51,7 @@ jobs:
       - name: Build with Next.js
         run: pnpm run build
         env:
-          NEXT_PUBLIC_WEBSITE_URL: "https://compassc.tf"
+          NEXT_PUBLIC_WEBSITE_URL: "https://home.compassc.tf"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
