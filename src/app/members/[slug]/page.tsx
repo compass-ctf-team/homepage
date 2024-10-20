@@ -24,11 +24,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata | un
 
 export async function generateStaticParams() {
   const members = getContents('members')
-  return members.map(member => ({ slug: member.slug }))
+  return members.map(member => ({ slug: member.metadata.status }))
 }
 
-export default function memberPage({ params }: Props) {
-  const members = getContents('members').filter(member => member.metadata.status === params.slug)
+export default function MemberPage({ params }: Props) {
+  const members = getContents('members').filter(member => member.slug === params.slug || member.metadata.status === params.slug)
   if (members.length === 0) notFound()
 
   return (
