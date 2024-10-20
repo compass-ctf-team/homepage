@@ -1,9 +1,7 @@
 import { Suspense } from 'react'
 
-import { Nav } from './_components/nav'
+import { Menu, Nav } from './_components/nav'
 import { getContents } from '@/lib/contents'
-
-import { Menu } from './_components/nav'
 
 interface Props {
   children: React.ReactNode

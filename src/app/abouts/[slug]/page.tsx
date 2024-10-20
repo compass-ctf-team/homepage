@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { MDXRenderer } from '@/components/mdx-renderer'
-
 import { getContents } from '@/lib/contents'
 
 interface Props {
@@ -11,10 +10,10 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata | undefined> {
-  let project = getContents('abouts').find(post => post.slug === params.slug)
-  if (!project) return
+  let about = getContents('abouts').find(post => post.slug === params.slug)
+  if (!about) return
 
-  let { summary: description } = project.metadata
+  let { summary: description } = about.metadata
   const title = params.slug.charAt(0).toUpperCase() + params.slug.slice(1)
 
   return {
@@ -24,18 +23,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata | un
 }
 
 export async function generateStaticParams() {
-  const projects = getContents('abouts')
-  return projects.map(project => ({ slug: project.slug }))
+  const abouts = getContents('abouts')
+  return abouts.map(about => ({ slug: about.slug }))
 }
 
 export default function AboutPage({ params }: Props) {
-  const project = getContents('abouts').find(project => project.slug === params.slug)
-  if (!project) notFound()
+  const about = getContents('abouts').find(about => about.slug === params.slug)
+  if (!about) notFound()
 
   return (
     <MDXRenderer
       limitWidth={false}
-      source={project.content}
+      source={about.content}
       components={{
         pre: props => <pre className='bg-transparent p-0' {...props} />
       }}

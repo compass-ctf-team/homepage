@@ -1,21 +1,17 @@
 import { Metadata } from 'next'
-import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Members',
-  description:
-    ''
+  description: 'Meet the hackers at COMPASS CTF team'
 }
 
 interface Props {
   children: React.ReactNode
 }
 
-export default function ProjectsLayout({ children }: Readonly<Props>) {
+export default function MembersLayout({ children }: Readonly<Props>) {
   return (
     <>
-      <Suspense fallback={<div className='mb-2 h-5' />}>
-      </Suspense>
       {children}
     </>
   )
