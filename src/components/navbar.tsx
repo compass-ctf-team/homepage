@@ -72,6 +72,10 @@ const menu = [
     href: 'https://detroit.sustech.edu.cn'
   },
   {
+    title: 'book',
+    href: 'https://book.compassc.tf'
+  },
+  {
     title: 'blog',
     href: 'https://blog.compassc.tf'
   }

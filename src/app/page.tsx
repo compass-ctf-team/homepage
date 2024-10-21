@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <pre className='flex h-full flex-col items-center justify-center space-y-2.5 whitespace-pre-wrap md:space-y-5'>
-      <code className='text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[1.6dvh] select-none'>{ascii}</code>
+      <code className='text-[2dvw] leading-[0.9] tracking-[-0.1em] lg:text-[2.0dvh] select-none'>{ascii}</code>
       <code className='text-center text-sm md:text-base'>
         <p>Hack For Fun Not For Profit</p>
       </code>
