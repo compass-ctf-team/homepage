@@ -1,0 +1,19 @@
+{
+  "name": "COMPASS CTF",
+  "short_name": "COMPASS CTF",
+  "theme_color": "#2E3440",
+  "background_color": "#2E3440",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "1563x1563",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ],
+  "splash_pages": null
+}
