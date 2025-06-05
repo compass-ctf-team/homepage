@@ -3,17 +3,13 @@
   "title": "COMPASS CTF",
   "name": "COMPASS CTF",
   "social": {
-    "github": "https://github.com/compass-ctf-team",
-    "ctftime": "https://ctftime.org/team/157891"
+    "github": "compass-ctf-team",
+    "ctftime": "157891"
   },
   "email": "info@compassc.tf",
   "ps1_hostname": "detroit",
   "ps1_username": "ctfer",
   "repo": "https://github.com/compass-ctf-team/homepage",
-  "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
-  },
   "colors": {
     "light": {
       "background": "#282a36",
