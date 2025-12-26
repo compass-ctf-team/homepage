@@ -14,8 +14,8 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `=========== Available Commands ===============
-\n${c}\n==============================================
+  return `=========== Available Commands ===========
+\n${c}\n==========================================
 [tab]: trigger completion.
 [ctrl+l]/clear: clear terminal.
 Type 'sumfetch' to display summary.\n
@@ -81,7 +81,7 @@ directories`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.`;
+  return `root privileges are required to run this command.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -119,14 +119,18 @@ FLAG=flag{m4k3_c0mp4s5_gr34t_4g41n!}`;
 
 // Banner
 export const banner = (args?: string[]): string => {
-  return `
+  return `<span class="hidden md:block">
  ██████╗ ██████╗ ███╗   ███╗██████╗  █████╗ ███████╗███████╗     ██████╗████████╗███████╗
 ██╔════╝██╔═══██╗████╗ ████║██╔══██╗██╔══██╗██╔════╝██╔════╝    ██╔════╝╚══██╔══╝██╔════╝
 ██║     ██║   ██║██╔████╔██║██████╔╝███████║███████╗███████╗    ██║        ██║   █████╗  
 ██║     ██║   ██║██║╚██╔╝██║██╔═══╝ ██╔══██║╚════██║╚════██║    ██║        ██║   ██╔══╝  
 ╚██████╗╚██████╔╝██║ ╚═╝ ██║██║     ██║  ██║███████║███████║    ╚██████╗   ██║   ██║     
  ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝     ╚═════╝   ╚═╝   ╚═╝     
-                                                                                         
+</span><span class="block md:hidden">
+░█▀▀░█▀█░█▄█░█▀█░█▀█░█▀▀░█▀▀░░░█▀▀░▀█▀░█▀▀
+░█░░░█░█░█░█░█▀▀░█▀█░▀▀█░▀▀█░░░█░░░░█░░█▀▀
+░▀▀▀░▀▀▀░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀░░░▀▀▀░░▀░░▀░░
+</span>
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 `;

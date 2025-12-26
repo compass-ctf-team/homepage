@@ -1,7 +1,7 @@
 // // List of commands that require API calls
 
 import { getProjects } from '../api';
-import { getReadme } from '../api';
+// import { getReadme } from '../api';
 
 export const projects = async (args: string[]): Promise<string> => {
   const projects = await getProjects();
@@ -13,8 +13,8 @@ export const projects = async (args: string[]): Promise<string> => {
     .join('\n');
 };
 
-export const readme = async (args: string[]): Promise<string> => {
-  const readme = await getReadme();
-  return `Opening GitHub README...\n
-  ${readme}`;
-};
+// export const readme = async (args: string[]): Promise<string> => {
+//   const readme = await getReadme();
+//   return `Opening GitHub README...\n
+//   ${readme}`;
+// };
