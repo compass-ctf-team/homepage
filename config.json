@@ -9,6 +9,20 @@
   "email": "info@compassc.tf",
   "ps1_hostname": "detroit",
   "ps1_username": "ctfer",
+  "members": {
+    "active": [
+      "B3N . all . <u><a href=\"https://blog.benx.dev\">blog.benx.dev</a></u>",
+      "xciphand . web & misc . <u><a href=\"https://b.x-d.fun/\">b.x-d.fun</a></u>",
+      "Cerulime . pwn & re . "
+    ],
+    "alumni": [
+      "Ander . all . <u><a href=\"/\">redacted</a></u>",
+      "Frank . re & pwn . <u><a href=\"https://frankoverflow.com/\">frankoverflow.com</a></u>",
+      "Monad . all . <u><a href=\"https://blog.monadx.com/\">blog.monadx.com</a></u>",
+      "GG Automation . all . <u><a href=\"https://github.com\">redacted</a></u>",
+      "Trust . all . <u><a href=\"https://github.com\">redacted</a></u>"
+    ]
+  },
   "repo": "https://github.com/compass-ctf-team/homepage",
   "colors": {
     "light": {

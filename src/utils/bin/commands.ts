@@ -14,11 +14,12 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
-\n${c}\n
+  return `=========== Available Commands ===============
+\n${c}\n==============================================
 [tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+[ctrl+l]/clear: clear terminal.
+Type 'sumfetch' to display summary.\n
+Thanks <u><a href="https://github.com/Cveinnt" target="_blank">Cveinnt</a></u> for the amazing <u><a href="https://github.com/Cveinnt/LiveTerm" target="_blank">LiveTerm</a></u>!
 `;
 };
 
@@ -30,11 +31,19 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
+  return `Hi, We are ${config.name}. 
+Welcome to our website!
+More about us:
 'sumfetch' - short summary.
-'readme' - my github readme.`;
+'members' - our members.`;
+};
+
+export const members = async (args: string[]): Promise<string> => {
+  return `Active Members
+${config.members.active.length > 0 ? config.members.active.map((member: string) => `  - ${member}`).join('\n') : '  NULL'}
+
+Alumni Members
+${config.members.alumni.length > 0 ? config.members.alumni.map((member: string) => `  - ${member}`).join('\n') : '  NULL'}`;
 };
 
 // Contact
@@ -43,10 +52,15 @@ export const email = async (args: string[]): Promise<string> => {
   return `Opening mailto:${config.email}...`;
 };
 
+// Socials
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
-
   return 'Opening github...';
+};
+
+export const awards = async (args: string[]): Promise<string> => {
+  window.open(`https://blog.compassc.tf/award`);
+  return 'Going to find our trophies...';
 };
 
 // Typical linux commands
@@ -95,6 +109,14 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
+export const env = async (args?: string[]): Promise<string> => {
+  return `USER=${config.ps1_username}
+HOME=/home/${config.ps1_username}
+HOST=${config.ps1_hostname}
+TERM=xterm-256color
+FLAG=flag{m4k3_c0mp4s5_gr34t_4g41n!}`;
+};
+
 // Banner
 export const banner = (args?: string[]): string => {
   return `
@@ -107,6 +129,5 @@ export const banner = (args?: string[]): string => {
                                                                                          
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
 `;
 };
